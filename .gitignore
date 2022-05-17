@@ -1,0 +1,13 @@
+# ignore data generated during program run
+__pycache__
+backend/data/
+
+## since results folder is already tracked, adding it here doesn't help, instead use this to ignore or restart$
+## for ignoring path: git update-index --assume-unchanged <file>
+## for re-tracking path: git update-index --no-assume-unchanged <file>
+
+
+# ignore pretrained models
+backend/model/
+assets/
+
