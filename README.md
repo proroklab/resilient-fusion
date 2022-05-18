@@ -58,10 +58,31 @@ To start the toolkit, you need 4 different terminal windows to execute the follo
     - USE_CARLAVIZ: Set to True if you have install Carlaviz and wish to use it. Default=False
     
     NOTE: The toolkit uses CARLA (and leaderboard) at the backend. The issue with this though is that with the version 0.9.11 used here, to change the settings regarding the model and route information, you would need to manually restart the toolkit every time. 
-    
+
+## Benchmark results
+All test results shown below as performed on the following route available via the toolkit interface:
+1. Town 05 Short, Route 0
+1. Town 05 Short, Route 10
+1. Town 05 Tiny, Route 10
+1. Town 05 Tiny, Route 110
+1. Town 05 Tiny, Route 210
+1. Town 05 Tiny, Route 310
+
+Each of these routes are tested for seeds: 0, 1, 2, 3, 4. Per seed, the route is run twice, once with 'no_scenario.json' and then with 'Town05_all_scenarios.json'.
+
+Thus results in the table below as obtained by averaging across 60 route variations (6 routes x 5 seeds per route x 2 scenarios = 60).
+
+NOTE: The testing and data collection phase is currently underway.
+
+### FGSM attack
+![Results of FGSM attack](assets/results/fsgm_attack.png)
+
+### Gaussian noise attack
+![Results of applying Gaussian noise to the image](assets/results/gaussian_noise_attack.png)
 
 ## Work in progress    
-- [ ]  Adversarial attacks on point cloud — currently all attacks are performed on the pseudo-image
+- [x]  Adversarial attacks directly on point cloud
+        - This is not currently possible. To be able to compute adversarial attacks we need to be able to run the input through the model to collect the gradients. But all our models accept psuedo-images as input. Additionally, the method of conversion used by these models to go from point cloud to psuedo-image is lossy, thereby not allowing to easily move back and forth between the two forms.
 - [ ]  CW attack on images does not work properly
 - [ ]  Test with CARLA >0.9.11 to see if it resolves the issue of having to restart the toolkit with each test
 - [ ]  Refactor and document code
