@@ -75,7 +75,7 @@ Thus results in the table below as obtained by averaging across 60 route variati
 NOTE: The testing and data collection phase is currently underway.
 
 ### FGSM attack
-![Results of FGSM attack](assets/results/fsgm_attack.png)
+![Results of FGSM attack](assets/results/fgsm_attack.png)
 
 ### Gaussian noise attack
 ![Results of applying Gaussian noise to the image](assets/results/gaussian_noise_attack.png)
