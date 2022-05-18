@@ -9,5 +9,5 @@ backend/data/
 
 # ignore pretrained models
 backend/model/
-assets/
+# assets/
 
