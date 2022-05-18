@@ -15,14 +15,15 @@ Applying various attacks to the Late Fusion model along Route 01 in Town05 Short
 ## Installation
 
 1. Install CARLA 0.9.11. Follow the instructions provided [here](https://carla.readthedocs.io/en/0.9.11/start_quickstart/#carla-installation).
-2. Clone this repo
+1. Clone this repo
     
     ```bash
     git clone <https://gitlab.developers.cam.ac.uk/cst/prorok-lab/resilient-fusion-nav.git>
     ```
     
-3. Setup a virtual environment with `Python 3.7` using the provided `requirements.txt` file.
-4. Install Carlaviz at `resilient-fusion-nav/backend`. This is an OPTIONAL step as the tool is not essential for the working of the toolkit. Carlaviz is a third-party tool that allows you to visualise the expected and actual trajectories of the ego vehicle. Installation instructions can be found [here](https://github.com/mjxu96/carlaviz/blob/master/docs/build.md). Note: Between step 1.1 and 1.2, you also need to execute `git fetch --all --tags`.
+1. Download the pre-trained models via [this link](https://drive.google.com/drive/folders/1n9t5EK0yAcoHaN5q3uKjYBlKivHdwKl2?usp=sharing) and place them under backend/model. This folder should currently have 3 models, and hence should look like -- backend/model/cilrs, backend/model/late_fusion and backend/model/transfuser.
+1. Setup a virtual environment with `Python 3.7` using the provided `requirements.txt` file.
+1. Install Carlaviz at `resilient-fusion-nav/backend`. This is an OPTIONAL step as the tool is not essential for the working of the toolkit. Carlaviz is a third-party tool that allows you to visualise the expected and actual trajectories of the ego vehicle. Installation instructions can be found [here](https://github.com/mjxu96/carlaviz/blob/master/docs/build.md). Note: Between step 1.1 and 1.2, you also need to execute `git fetch --all --tags`.
 
 
 ## Usage
