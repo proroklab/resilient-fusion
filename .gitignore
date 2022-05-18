@@ -1,3 +1,6 @@
+# Mac assets to ignore
+.DS_Store
+
 # ignore data generated during program run
 __pycache__
 backend/data/
